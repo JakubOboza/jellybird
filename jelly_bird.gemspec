@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["JO"]
   s.email       = ["jakub.oboza@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Ultra small gem for generating objects}
+  s.description = %q{JellyBird is a ultra small factory to help generating objects for purpose of tests.}
 
   s.rubyforge_project = "jelly_bird"
 
