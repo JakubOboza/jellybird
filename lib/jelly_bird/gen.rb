@@ -5,9 +5,10 @@ module JellyBird
     def gen(opts = {})
       options = self::generator.call if self::generator
       options.merge!(opts)
-      self.new(options)
+      obj = self.new(options)
+       options.each_pair { |key, value| obj[key] = value } if obj.kind_of?(Hash)
+      obj
     end
 
   end
-
 end
