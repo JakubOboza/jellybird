@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 class Mummy
-  include JellyBird
-
   attr_accessor :attributes
 
   def initialize(opts = {})
@@ -11,13 +9,9 @@ class Mummy
 
 end
 
-class Dummy < Hash
-  include JellyBird
-end
+class Dummy < Hash; end
 
-class Rummy < Hash
-  include JellyBird
-end
+class Rummy < Hash; end
 
 describe JellyBird do
 

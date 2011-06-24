@@ -11,3 +11,8 @@ module JellyBird
   end
 
 end
+
+# add it to each Object
+class Object
+  include JellyBird
+end
