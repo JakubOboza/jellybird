@@ -25,9 +25,7 @@ to generate object in test just use `.gen` like this `Dummy.gen` to get generate
       :name => /\w{3,10}/.gen
     }}
 
-    1.upto(10) do |i|
-      puts Dummy.gen.name
-    end
+    10.times { puts Dummy.gen.name }
 
     dummy = Dummy.gen
     puts dummy.name

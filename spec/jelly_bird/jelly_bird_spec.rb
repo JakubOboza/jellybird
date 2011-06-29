@@ -65,6 +65,12 @@ describe JellyBird do
       dummy[:name].should eql("test")
     end
 
+    it "should not generate same name" do
+      500.times do
+        Dummy.gen[:name].should_not eql(Dummy.gen[:name])
+      end
+    end
+
   end
 
 end
