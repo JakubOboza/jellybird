@@ -100,6 +100,20 @@ describe JellyBird do
 
    end
 
+   it "should not override other generators" do
+
+      Rummy.define {{
+          :aa => "Rummy"
+      }}
+
+      Dummy.define {{
+          :bb => "Dummy"
+      }}
+
+      Rummy.gen[:aa].should eql("Rummy")
+
+   end
+
   end
 
 end
