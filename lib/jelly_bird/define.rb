@@ -2,14 +2,14 @@ module JellyBird
 
   module Define
 
-    @@generators = nil
+    @@generator = {}
 
     def define(&default_lambda)
-      @@generator = default_lambda
+      @@generator[self.to_s] = default_lambda
     end
 
     def generator
-      @@generator
+      @@generator[self.to_s]
     end
 
   end
