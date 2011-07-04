@@ -2,7 +2,10 @@
 
 # instalation
 
-add to bundler ( test group )
+type
+    gem install jelly_bird
+
+or add to bundler ( test group )
 
     "jelly_bird", :git => "git@github.com:JakubOboza/jellybird.git"
 
