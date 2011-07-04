@@ -3,7 +3,7 @@
 # instalation
 
 type
-    gem install jelly_bird
+     gem install jelly_bird
 
 or add to bundler ( test group )
 
