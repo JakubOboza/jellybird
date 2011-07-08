@@ -31,4 +31,7 @@ to generate object in test just use `.gen` like this `Dummy.gen` to get generate
     10.times { puts Dummy.gen[:name] }
 
     dummy = Dummy.gen
-    puts dummy[:name]
+    # dummy[:name] => random generated /\w{3,10}/ compilant word
+
+    other_dummy = Dummy.gen(:name => "dummy name")
+    # other_dummy[:name] => "dummy name"
