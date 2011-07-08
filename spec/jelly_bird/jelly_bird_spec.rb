@@ -87,8 +87,6 @@ describe JellyBird do
     end
 
    it "should generate object inside of other object" do
-
-      # bug, currently for hashes you can input a gen inside of a define ;/
       dummy = Dummy.gen
 
       Rummy.define {{
@@ -98,6 +96,13 @@ describe JellyBird do
       mummy = Rummy.gen
       mummy[:baby_rummy_is_a][:name].should_not be_nil
 
+     Rummy.define {{
+       :baby => Dummy.gen,
+       :name => /\w{3,6}/.gen
+     }}
+
+     Rummy.gen.should be_a(Rummy)
+     Rummy.gen[:baby].should be_a(Dummy)
    end
 
    it "should not override other generators" do
