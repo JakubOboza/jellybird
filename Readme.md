@@ -59,6 +59,9 @@ remember that if you wanna embbed one into another please don't specify them at 
 
 Now just use it in tests!
 
+$ Powered by
+  It is powered by `randexp` gem and initial concept was based on `dm-sweatshop` syntax. Big thanks to this two projects.
+
 
 # Author
   Jakub Oboza, https://github.com/JakubOboza
