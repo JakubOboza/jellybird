@@ -1,3 +1,4 @@
+
 module JellyBird
 
   module Define
@@ -5,7 +6,11 @@ module JellyBird
     @@generator = {}
 
     def define(name = :default, &default_lambda)
-      @@generator[self.to_s] = { name => default_lambda }
+      if @@generator[self.to_s]
+        @@generator[self.to_s][name] = default_lambda
+      else
+        @@generator[self.to_s] = { name => default_lambda }
+      end
     end
 
     def generator(name = :default)
