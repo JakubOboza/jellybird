@@ -4,12 +4,12 @@ module JellyBird
 
     @@generator = {}
 
-    def define(&default_lambda)
-      @@generator[self.to_s] = default_lambda
+    def define(name = :default, &default_lambda)
+      @@generator[self.to_s] = { name => default_lambda }
     end
 
-    def generator
-      @@generator[self.to_s]
+    def generator(name = :default)
+      @@generator[self.to_s][name]
     end
 
   end
