@@ -36,6 +36,22 @@ to generate object in test just use `.gen` like this `Dummy.gen` to get generate
     other_dummy = Dummy.gen(:name => "dummy name")
     # other_dummy[:name] => "dummy name"
 
+# custom factories
+you can define custom factories, and generate object using `.generate` mwthod with factory name like this.
+
+    Mummy.define {{
+      :left  => /\w{3,10}/.gen,
+      :right => /\w{3,10}/.gen
+    }}
+
+    Mummy.define(:custom) {{
+      :center => /\w{3,10}/.gen
+    }}
+
+    mummy = Mummy.generate(:custom, :mumble => true)
+
+in fact `.gen` is just calling generate with `:default` symbol.
+
 # integration with rspec
 
 touch a file with defines like `factories.rb` in spec folder and then require it inside of your `spec_helper.rb`. Then define all the factories like this.
