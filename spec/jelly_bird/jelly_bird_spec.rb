@@ -7,6 +7,10 @@ class Mummy
     self.attributes = opts
   end
 
+  def bandage
+    self.attributes[:bandage] = true
+  end
+
 end
 
 class Dummy < Hash; end
@@ -117,6 +121,12 @@ describe JellyBird do
 
       Rummy.gen[:aa].should eql("Rummy")
 
+   end
+
+   it "should be able to run bandage within gen " do
+     mummy = Mummy.gen {|mummy| mummy.bandage }
+     mummy.should be_kind_of(Mummy)
+     mummy.attributes[:bandage].should be_true
    end
 
   end
