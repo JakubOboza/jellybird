@@ -57,18 +57,18 @@ in fact `.gen` is just calling generate with `:default` symbol.
 touch a file with defines like `factories.rb` in spec folder and then require it inside of your `spec_helper.rb`. Then define all the factories like this.
 
 
-User.define {{
-  :first_name => /\w{3,9}/.gen,
-  :last_name  => /\w{3,8}/.gen,
-  :email      => /\w{3,8}@\w{3,8}\.com/.gen
-}}
+    User.define {{
+      :first_name => /\w{3,9}/.gen,
+      :last_name  => /\w{3,8}/.gen,
+      :email      => /\w{3,8}@\w{3,8}\.com/.gen
+    }}
 
-Family.define {{
-  :father      => User.gen,
-  :mom         => User.gen,
-  :kind        => USer.gen,
-  :family_name => /\w{3,8}/.gen
-}}
+    Family.define {{
+      :father      => User.gen,
+      :mom         => User.gen,
+      :kind        => USer.gen,
+      :family_name => /\w{3,8}/.gen
+    }}
 
 
 remember that if you wanna embbed one into another please don't specify them at random order :).
