@@ -52,6 +52,12 @@ you can define custom factories, and generate object using `.generate` mwthod wi
 
 in fact `.gen` is just calling generate with `:default` symbol.
 
+# generate with hook
+
+    user = User.gen {|user| user.save }
+
+doing this returns you object which received :save after generating
+
 # integration with rspec
 
 touch a file with defines like `factories.rb` in spec folder and then require it inside of your `spec_helper.rb`. Then define all the factories like this.
