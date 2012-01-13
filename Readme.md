@@ -1,5 +1,7 @@
 # Jelly Bird gem
 
+  It is a simple library for building objects in test / spec case's. It is made to be simple and emulate same thing that ruby do in production. It is thin and fast and if you will find a case that deson't work with it just let me know :)
+
 # instalation
 
 type
