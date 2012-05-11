@@ -39,7 +39,7 @@ to generate object in test just use `.gen` like this `Dummy.gen` to get generate
     # other_dummy[:name] => "dummy name"
 
 # custom factories
-you can define custom factories, and generate object using `.generate` mwthod with factory name like this.
+you can define custom factories, and generate object using `.generate` method with factory name like this.
 
     Mummy.define {{
       :left  => /\w{3,10}/.gen,
