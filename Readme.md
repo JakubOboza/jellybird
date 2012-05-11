@@ -74,7 +74,7 @@ touch a file with defines like `factories.rb` in spec folder and then require it
     Family.define {{
       :father      => User.gen,
       :mom         => User.gen,
-      :kind        => USer.gen,
+      :kind        => User.gen,
       :family_name => /\w{3,8}/.gen
     }}
 
