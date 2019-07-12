@@ -101,3 +101,6 @@ Now just use it in tests!
 
 # Author
   Jakub Oboza, https://github.com/JakubOboza
+
+# Trigger
+this trigger should make it build.
